@@ -4,7 +4,7 @@ info:
   description: Documentation for the Plant Care API
   version: 1.0.0
 servers:
-  - url: http://localhost:3000/api/v1
+  - url: https://plantprocare-api.netlify.app/api/v1
 paths:
   /plants:
     get:
