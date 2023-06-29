@@ -1,0 +1,218 @@
+openapi: 3.0.0
+info:
+  title: Plant Care API
+  description: Documentation for the Plant Care API
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api/v1
+paths:
+  /plants:
+    get:
+      summary: Get a list of plant species
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+    post:
+      summary: Add a new plant species
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                careRequirements:
+                  type: string
+                wateringSchedule:
+                  type: string
+                lightPreferences:
+                  type: string
+                temperatureRange:
+                  type: string
+                additionalNotes:
+                  type: string
+      responses:
+        "201":
+          description: Plant species added successfully
+
+  /plants/{id}:
+    get:
+      summary: Get details of a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  careRequirements:
+                    type: string
+                  wateringSchedule:
+                    type: string
+                  lightPreferences:
+                    type: string
+                  temperatureRange:
+                    type: string
+                  additionalNotes:
+                    type: string
+    put:
+      summary: Update details of a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                careRequirements:
+                  type: string
+                wateringSchedule:
+                  type: string
+                lightPreferences:
+                  type: string
+                temperatureRange:
+                  type: string
+                additionalNotes:
+                  type: string
+      responses:
+        "200":
+          description: Plant species updated successfully
+    delete:
+      summary: Delete a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Plant species deleted successfully
+
+  /plants/{id}/care-tips:
+    get:
+      summary: Get care tips for a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  careTips:
+                    type: array
+                    items:
+                      type: string
+
+  /plants/{id}/watering-schedule:
+    get:
+      summary: Get watering schedule for a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  wateringSchedule:
+                    type: string
+
+  /plants/{id}/light-preferences:
+    get:
+      summary: Get light preferences for a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  lightPreferences:
+                    type: string
+
+  /plants/{id}/temperature-range:
+    get:
+      summary: Get temperature range for a specific plant species
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  temperatureRange:
+                    type: string

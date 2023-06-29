@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Snake Plant",
+    "scientificName": "Sansevieria trifasciata",
+    "description": "Snake Plant is a popular houseplant known for its long, upright leaves with a pattern of green and yellow. It is easy to care for and is tolerant of low light conditions.",
+    "careInstructions": "Place in indirect sunlight and water sparingly, allowing the soil to dry between waterings. Avoid overwatering.",
+    "imageUrl": "https://example.com/snake-plant.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Monstera Deliciosa",
+    "scientificName": "Monstera deliciosa",
+    "description": "Monstera Deliciosa, also known as the Swiss Cheese Plant, is a popular tropical plant with large, fenestrated leaves. It adds a touch of exotic beauty to any indoor space.",
+    "careInstructions": "Provide bright, indirect sunlight and water when the top inch of soil feels dry. Mist the leaves occasionally to increase humidity.",
+    "imageUrl": "https://example.com/monstera-deliciosa.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Peace Lily",
+    "scientificName": "Spathiphyllum wallisii",
+    "description": "Peace Lily is a beautiful flowering plant that produces elegant white flowers. It is known for its air-purifying properties and is a popular choice for indoor environments.",
+    "careInstructions": "Place in bright, indirect sunlight and keep the soil evenly moist. Mist the leaves occasionally to maintain humidity.",
+    "imageUrl": "https://example.com/peace-lily.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Spider Plant",
+    "scientificName": "Chlorophytum comosum",
+    "description": "Spider Plant is a resilient and versatile plant with arching leaves and small white flowers. It is easy to care for and produces plantlets that can be propagated.",
+    "careInstructions": "Provide bright, indirect sunlight and water when the top inch of soil feels dry. Spider plants appreciate high humidity.",
+    "imageUrl": "https://example.com/spider-plant.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Fiddle Leaf Fig",
+    "scientificName": "Ficus lyrata",
+    "description": "Fiddle Leaf Fig is a popular indoor tree with large, glossy leaves. It makes a bold statement and adds a touch of elegance to any room.",
+    "careInstructions": "Place in bright, indirect sunlight and water when the top inch of soil feels dry. Avoid moving the plant frequently.",
+    "imageUrl": "https://example.com/fiddle-leaf-fig.jpg"
+  }
+]
