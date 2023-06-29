@@ -3,7 +3,7 @@ import plantsData from "../../../data/plants.json";
 export default function handler(req, res) {
   // Enable CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   if (req.method === "OPTIONS") {
@@ -14,11 +14,7 @@ export default function handler(req, res) {
 
   if (req.method === "GET") {
     res.status(200).json(plantsData);
-  } else {
-    res.status(405).json({ message: "Method Not Allowed" });
-  }
-
-  if (req.method === "POST") {
+  } else if (req.method === "POST") {
     // Assuming you have access to a database or data storage mechanism
     // You can save the posted plant data to the database here
 
